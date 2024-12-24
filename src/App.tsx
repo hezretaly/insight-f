@@ -30,7 +30,7 @@ function ConditionalNavbar() {
 function App() {
   return (
     <BrowserRouter>
-      <ConditionalNavbar /> {/* Conditionally render the Navbar */}
+      <ConditionalNavbar /> {/* Conditionally render the Navbar r */}
       <Routes>
         <Route path="/login3" element={<Login />} />
         <Route path="/login" element={<Login2 />} />
