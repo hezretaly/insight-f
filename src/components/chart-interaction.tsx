@@ -51,7 +51,6 @@ type InteractionItem = {
 const fetchChartData = async (message: string): Promise<ChartData> => {
   // const address = 'http://127.0.0.1:5000/api/insight'
   const token = localStorage.getItem('token')
-  console.log("Token:", token);
   const response = await fetch('http://127.0.0.1:5000/api/insight', {
     method: 'POST', // Changed to POST to send data
       headers: {
@@ -66,7 +65,6 @@ const fetchChartData = async (message: string): Promise<ChartData> => {
   }
 
   const jsonData = await response.json();
-  console.log("Received JSON data:", jsonData);
   
   return jsonData;
 }

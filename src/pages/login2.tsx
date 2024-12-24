@@ -38,7 +38,6 @@ export function Login2() {
 
       if (response.ok) {
         // Successful login
-        console.log('Login successful!', data);
         // Store the token (e.g., in local storage)
         localStorage.setItem('token', data.access_token);
 

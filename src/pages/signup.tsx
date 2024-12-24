@@ -53,7 +53,6 @@ export function Signup() {
       if (response.ok) {
         // Successful registration
         setIsRegistered(true); // Update registration status
-        console.log('Registration successful!', data);
 
         // Redirect to login after a short delay (optional)
         setTimeout(() => {
