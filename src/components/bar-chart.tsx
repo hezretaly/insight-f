@@ -6,7 +6,7 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/
 
 interface BarChartProps {
   data: [string | number, number][]
-  title: string
+  title?: string
   description?: string
 }
 

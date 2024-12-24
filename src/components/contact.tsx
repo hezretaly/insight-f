@@ -41,7 +41,7 @@ const Contact = () => {
     event.preventDefault();
     setState({ ...state, loading: true, error: null, success: false });
 
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from('contactmessages')
       .insert([
         {

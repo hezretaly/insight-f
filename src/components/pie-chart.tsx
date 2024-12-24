@@ -6,7 +6,7 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/
 
 interface PieChartProps {
   data: [string | number, number][]
-  title: string
+  title?: string
   description?: string
 }
 
@@ -54,7 +54,7 @@ export function PieChart({ data, title, description }: PieChartProps) {
                 outerRadius="80%"
                 label={(entry) => entry.name}
               >
-                {formattedData.map((entry, index) => (
+                {formattedData.map((_, index) => (
                   <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
                 ))}
               </Pie>

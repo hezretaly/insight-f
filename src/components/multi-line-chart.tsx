@@ -12,7 +12,7 @@ type ChartDataItem = {
 
 interface MultiLineChartProps {
   data: ChartDataItem[]
-  title: string
+  title?: string
   description?: string
 }
 

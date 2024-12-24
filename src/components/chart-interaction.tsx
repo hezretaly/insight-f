@@ -10,19 +10,35 @@ import { Skeleton } from "@/components/ui/skeleton"
 import { BarChart } from "./bar-chart"
 import { PieChart } from "./pie-chart"
 
-type ChartType = "line" | "bar" | "pie"
+// type ChartType = "line" | "bar" | "pie"
 
 type ChartDataItem = {
   name: string;
   [key: string]: string | number; // Index signature for dynamic properties
 }
 
-type ChartData = {
-  type: ChartType
-  data: ChartDataItem[] | [string|number, number][]
-  title?: string
-  description?: string
-}
+type LineChartData = {
+  type: "line";
+  data: ChartDataItem[];
+  title?: string;
+  description?: string;
+};
+
+type BarChartData = {
+  type: "bar";
+  data: [string | number, number][];
+  title?: string;
+  description?: string;
+};
+
+type PieChartData = {
+  type: "pie";
+  data: [string | number, number][];
+  title?: string;
+  description?: string;
+};
+
+type ChartData = LineChartData | BarChartData | PieChartData;
 
 
 
