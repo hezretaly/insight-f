@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 
 const CTA = () => {
@@ -13,10 +14,9 @@ const CTA = () => {
             Get a working demo for you own Data!
           </p>
           <div className="flex w-full flex-col justify-center gap-2 sm:flex-row">
-            {/* <Button variant="outline" className="w-full sm:w-auto">
-              Learn More
-            </Button> */}
-            <Button className="w-full sm:w-auto">Request a Demo</Button>
+            <Link to={"/contact"}>
+              <Button className="w-full sm:w-auto">Request a Demo</Button>
+            </Link>
           </div>
         </div>
       </div>

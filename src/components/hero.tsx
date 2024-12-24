@@ -2,6 +2,8 @@ import { ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 import { Button } from '@/components/ui/button';
+import YtVideoComponent from '@/components/yt-video-component';
+
 
 
 const Hero = () => {
@@ -18,27 +20,16 @@ const Hero = () => {
                 Leverage the power of AI to uncover hidden patterns directly from your database schema – securely and effortlessly.
               </p>
               <div className="mt-12 flex w-full flex-col justify-center gap-2 sm:flex-row">
-                <Link to={"/line-chart"}>
+                <Link to={"/contact"}>
                 <Button>
                   Get started now
                   <ChevronRight className="ml-2 h-4" />
                 </Button>
                 </Link>
-                <Link to={"/ch1"}>
-                  <Button>
-                    Learn more
-                    <ChevronRight className="ml-2 h-4" />
-                  </Button>
-                </Link>
-                
               </div>
             </div>
           </div>
-          <img
-            src=""
-            alt="here should be a youtube video"
-            className="mx-auto mt-24 max-h-[700px] w-full max-w-7xl rounded-t-lg object-cover shadow-lg"
-          />
+          <YtVideoComponent />
         </div>
       </div>
     </section>
